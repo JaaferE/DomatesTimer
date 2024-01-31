@@ -18,6 +18,7 @@
           "System.Reactive": "5.0.0",
           "VL.CoreLib": "2023.5.2",
           "VL.CoreLib.Windows": "2023.5.2",
+          "VL.GameAudioPlayer": "1.0.4",
           "VL.Skia": "2023.5.2",
           "VL.WinFormsUtils": "1.0.11",
           "SharpDX.MediaFoundation.Reference": "4.2.0.0",
@@ -25,6 +26,7 @@
           "VL.AppServices": "2023.5.0.0",
           "VL.CoreLib.vl": "0.0.0.0",
           "VL.CoreLib.Windows.vl": "0.0.0.0",
+          "VL.GameAudioPlayer.vl": "0.0.0.0",
           "VL.Skia.vl": "0.0.0.0",
           "VL.WinFormsUtils.vl": "0.0.0.0"
         },
@@ -53,6 +55,25 @@
           "lib/net6.0/CommunityToolkit.HighPerformance.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.0.1"
+          }
+        }
+      },
+      "CSFML/2.5.0": {
+        "native": {
+          "runtimes/win-x64/native/csfml-Audio.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/csfml-Graphics.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/csfml-System.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/csfml-Window.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/openal32.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -416,6 +437,64 @@
           "lib/netstandard2.1/ServiceWire.dll": {
             "assemblyVersion": "5.3.4.0",
             "fileVersion": "5.3.4.0"
+          }
+        }
+      },
+      "SFML.Audio/2.5.0": {
+        "dependencies": {
+          "CSFML": "2.5.0",
+          "SFML.Graphics": "2.5.0",
+          "SFML.System": "2.5.0",
+          "SFML.Window": "2.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SFML.Audio.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
+        }
+      },
+      "SFML.Graphics/2.5.0": {
+        "dependencies": {
+          "CSFML": "2.5.0",
+          "SFML.System": "2.5.0",
+          "SFML.Window": "2.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SFML.Graphics.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
+        }
+      },
+      "SFML.Net/2.5.0": {
+        "dependencies": {
+          "SFML.Audio": "2.5.0",
+          "SFML.Graphics": "2.5.0",
+          "SFML.System": "2.5.0",
+          "SFML.Window": "2.5.0"
+        }
+      },
+      "SFML.System/2.5.0": {
+        "dependencies": {
+          "CSFML": "2.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SFML.System.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
+        }
+      },
+      "SFML.Window/2.5.0": {
+        "dependencies": {
+          "CSFML": "2.5.0",
+          "SFML.System": "2.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SFML.Window.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
           }
         }
       },
@@ -1464,6 +1543,11 @@
           }
         }
       },
+      "VL.GameAudioPlayer/1.0.4": {
+        "dependencies": {
+          "SFML.Net": "2.5.0"
+        }
+      },
       "VL.Skia/2023.5.2": {
         "dependencies": {
           "SharpDX.Direct3D11": "4.2.0",
@@ -1515,6 +1599,14 @@
       "VL.CoreLib.Windows.vl/0.0.0.0": {
         "runtime": {
           "VL.CoreLib.Windows.vl.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "VL.GameAudioPlayer.vl/0.0.0.0": {
+        "runtime": {
+          "VL.GameAudioPlayer.vl.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           }
@@ -1596,6 +1688,13 @@
       "sha512": "sha512-S5Iv1d5UJZNJLJbe/xzJmLqYJ2mhefbLAvhXCZEh3G4sFadUBuQZhQioE4oJG4enY69QMuJX3AX9+6P9rH1bMw==",
       "path": "communitytoolkit.highperformance/8.0.0",
       "hashPath": "communitytoolkit.highperformance.8.0.0.nupkg.sha512"
+    },
+    "CSFML/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A3X+zyjAtvIQkpwCSS/F5fDOFRWeT+USIAK+DhGujNufF+qV1ty5cYGJihmmGeokX3yd89uZoNH8mcsmXCY/yw==",
+      "path": "csfml/2.5.0",
+      "hashPath": "csfml.2.5.0.nupkg.sha512"
     },
     "FSharp.Core/4.3.2": {
       "type": "package",
@@ -2023,6 +2122,41 @@
       "sha512": "sha512-CAKbOs5vOJisLkGmYzoeXeYhUks/1Wiej1SjYKZp6es5YmCIAPdcnZ/fD39gTLLfmi+Rbd+wi1cKWm+esDrzHg==",
       "path": "servicewire/5.3.4",
       "hashPath": "servicewire.5.3.4.nupkg.sha512"
+    },
+    "SFML.Audio/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M5EIksRefT3nsLT32oEpESStsnlixR+YjKS6fUMl+vDQ3gdMaV4jc84pg3kbfM9w4RYKAyH6OWV4bzDU5FNZyA==",
+      "path": "sfml.audio/2.5.0",
+      "hashPath": "sfml.audio.2.5.0.nupkg.sha512"
+    },
+    "SFML.Graphics/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-77Nuz0qmK2q2+901J0439LC6qFNw5VT0qjqqA7zSaM0WrV7K/UozBjfO/ROCY0iW+w7IEqPYiXBK4A7xO5nvsQ==",
+      "path": "sfml.graphics/2.5.0",
+      "hashPath": "sfml.graphics.2.5.0.nupkg.sha512"
+    },
+    "SFML.Net/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XVxrtNX6FJOpI7OzsTlKUKI92C8CKVe1rYtNbyj9fdIdZgidwpK/kExhxH5XYxpJ5C1/EUsGdOrGx4BCfsQvbw==",
+      "path": "sfml.net/2.5.0",
+      "hashPath": "sfml.net.2.5.0.nupkg.sha512"
+    },
+    "SFML.System/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vdlmLjPRhOD25WX/L2wP3F9dg/3mTj6hhyHkqtleC0fA5WNr71F0ijLbvs32BBpow5OoyU7BryKMjy1WNmU0GQ==",
+      "path": "sfml.system/2.5.0",
+      "hashPath": "sfml.system.2.5.0.nupkg.sha512"
+    },
+    "SFML.Window/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KuQvC0TrsxzhFJw9hDvMAzKD8/12jvXjP7sC3UO5MSM0sy5sfYNTqQktnQ3ELAV+rP1cqRKLsvosBfMfl1HkRw==",
+      "path": "sfml.window/2.5.0",
+      "hashPath": "sfml.window.2.5.0.nupkg.sha512"
     },
     "SharpDX/4.2.0": {
       "type": "package",
@@ -2710,6 +2844,13 @@
       "path": "vl.corelib.windows/2023.5.2",
       "hashPath": "vl.corelib.windows.2023.5.2.nupkg.sha512"
     },
+    "VL.GameAudioPlayer/1.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NMfkpuHu12yf+Fby3qfTf6oEu14CZ167H7/A66S/hX0bpN5Gkq/yzqkQYOzrLLUnevJsgtPCXadH2euPx8WAMw==",
+      "path": "vl.gameaudioplayer/1.0.4",
+      "hashPath": "vl.gameaudioplayer.1.0.4.nupkg.sha512"
+    },
     "VL.Skia/2023.5.2": {
       "type": "package",
       "serviceable": true,
@@ -2745,6 +2886,11 @@
       "sha512": ""
     },
     "VL.CoreLib.Windows.vl/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VL.GameAudioPlayer.vl/0.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
